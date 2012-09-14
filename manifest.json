@@ -1,0 +1,16 @@
+{
+        "name": "REDBOX ranking (Beta)",
+        "description": "Parses videos out of Redbox and ranks",
+        "version": "0.1",
+        "manifest_version": 2,
+        "permissions": ["contextMenus", "http://127.0.0.1:8989/", "http://rbxrank.aws.af.cm/"],
+        "content_security_policy": "default-src 'self'",
+        "content_scripts": [
+            {
+                "matches": ["*://*.redbox.com/*"],
+                "css" : ["rank.css"],
+                "js": ["jquery.min.js","parser.js"]
+            }
+        ]
+
+}
